@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Nhập vào 1 số:</h1>
+    <input id="num" type="number" oninput="inSo()">
+    <br>
+    <h5>Số đảo ngược là:</h5>
+    <code id="print"></code>
+    <script>
+        function inSo() {
+            let n = Number(document.getElementById("num").value)
+            let du
+            let nghich = 0
+            while (n > 0) {
+                du = n % 10
+                nghich = (nghich * 10) + du
+                n = Math.floor(n / 10)
+            }
+            document.getElementById("print").innerHTML = nghich
+        }
+    </script>
+</body>
+
+</html>
